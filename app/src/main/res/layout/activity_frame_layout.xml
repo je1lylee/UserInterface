@@ -7,27 +7,32 @@
     tools:context=".FrameLayout">
 
     <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:textSize="50dip"
-        android:textColor="#ffffff"
-        android:text="第一层" />
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:id="@+id/tv_frame1"
+        android:layout_gravity="center"
+        android:background="#ff6143"
+        />
     <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:textSize="40dip"
-        android:textColor="#ffff00"
-        android:text="第二层"/>
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:id="@+id/tv_frame2"
+        android:background="#7bfe00"
+        android:layout_gravity="center"
+        />
     <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:textSize="30dip"
-        android:textColor="#ff00ff"
-        android:text="第三层"/>
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:id="@+id/tv_frame3"
+        android:background="#ffff00"
+        />
     <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:textSize="20dip"
-        android:textColor="#00ffff"
-        android:text="第四层"/>
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:id="@+id/tv_frame4"
+        android:layout_gravity="center"
+        android:background="#0000FF"
+        />
+
 </FrameLayout>
