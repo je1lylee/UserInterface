@@ -20,4 +20,17 @@
         android:id="@+id/tv_main_2"
         android:autoLink="all"
         />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3.具有跑马灯效果的TextView3.具有跑马灯效果的TextView3.具有跑马灯效果的TextView"
+        android:textSize="20sp"
+        android:id="@+id/tv_main3"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:singleLine="true"
+
+        />
 </LinearLayout>

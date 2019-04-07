@@ -10,14 +10,14 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".grid_activity"></activity>
-        <activity android:name=".RadioButtonD">
+        <activity android:name=".RadioButtonD"></activity>
+        <activity android:name=".TextView">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity android:name=".TextView" />
+        </activity>>
         <activity android:name=".viewMain" />
         <activity android:name=".layoutMain" />
         <activity android:name=".FrameLayout" />
