@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     private Button btn_Layout;
@@ -45,22 +46,30 @@ public class MainActivity extends AppCompatActivity {
     private class MyClickListener implements View.OnClickListener {
         @Override
         public void onClick(View view) {
+            Intent intent = new Intent();
             switch (view.getId()){
                 case R.id.btn_layout:
-                    Intent intent = new Intent(MainActivity.this,BasicLayout.class);
+                   intent.setClass(MainActivity.this,BasicLayout.class);
                     startActivity(intent);
                     break;
                 case R.id.btn_view:
+                    intent.setClass(MainActivity.this,viewMain.class);
+                    startActivity(intent);
                     break;
                 case R.id.btn_dialog:
+                    Toast.makeText(MainActivity.this, "#暂不可用#", Toast.LENGTH_SHORT).show();
                     break;
                 case R.id.btn_toast:
+                    Toast.makeText(MainActivity.this, "#暂不可用#", Toast.LENGTH_SHORT).show();
                     break;
                 case R.id.btn_menu:
+                    Toast.makeText(MainActivity.this, "#暂不可用#", Toast.LENGTH_SHORT).show();
                     break;
                 case R.id.btn_guide:
+                    Toast.makeText(MainActivity.this, "#暂不可用#", Toast.LENGTH_SHORT).show();
                     break;
                 case R.id.btn_adapter:
+                    Toast.makeText(MainActivity.this, "#暂不可用#", Toast.LENGTH_SHORT).show();
                     break;
             }
         }
