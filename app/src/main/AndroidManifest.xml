@@ -9,21 +9,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".grid_activity"></activity>
-        <activity android:name=".RadioButtonD"></activity>
-        <activity android:name=".TextView">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>>
+        <activity android:name=".BasicLayout"></activity>
+        <activity android:name=".grid_activity" />
+        <activity android:name=".RadioButtonD" />
+        <activity android:name=".TextView"></activity>
         <activity android:name=".viewMain" />
         <activity android:name=".layoutMain" />
         <activity android:name=".FrameLayout" />
         <activity android:name=".RelativeLayout2" />
         <activity android:name=".RelativeLayout" />
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

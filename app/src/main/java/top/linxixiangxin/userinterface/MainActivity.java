@@ -1,5 +1,6 @@
 package top.linxixiangxin.userinterface;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -32,6 +33,13 @@ public class MainActivity extends AppCompatActivity {
         btn_menu.setOnClickListener(new MyClickListener());
         btn_guide.setOnClickListener(new MyClickListener());
         btn_adapter.setOnClickListener(new MyClickListener());
+        btn_Layout.setOnClickListener(new MyClickListener());
+        btn_view.setOnClickListener(new MyClickListener());
+        btn_dialog.setOnClickListener(new MyClickListener());
+        btn_toast.setOnClickListener(new MyClickListener());
+        btn_menu.setOnClickListener(new MyClickListener());
+        btn_guide.setOnClickListener(new MyClickListener());
+        btn_adapter.setOnClickListener(new MyClickListener());
     }
 
     private class MyClickListener implements View.OnClickListener {
@@ -39,6 +47,8 @@ public class MainActivity extends AppCompatActivity {
         public void onClick(View view) {
             switch (view.getId()){
                 case R.id.btn_layout:
+                    Intent intent = new Intent(MainActivity.this,BasicLayout.class);
+                    startActivity(intent);
                     break;
                 case R.id.btn_view:
                     break;

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BasicLayout"
+    android:id="@+id/basic_layout"
+    >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView1"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:textSize="25sp"
+        android:textAllCaps="false"
+        android:text="Android 布局"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_Linear"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/textView1"
+        android:text="线性布局 Linner layout"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_Relative"
+        android:layout_below="@+id/btn_Linear"
+        android:layout_centerHorizontal="true"
+        android:text="相对布局 relative layout"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_Frame"
+        android:layout_below="@+id/btn_Relative"
+        android:layout_centerHorizontal="true"
+        android:text="帧布局 Frame layout"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_Table"
+        android:layout_below="@+id/btn_Frame"
+        android:layout_centerHorizontal="true"
+        android:text="表格布局 table layout"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_Grid"
+        android:layout_below="@+id/btn_Table"
+        android:layout_centerHorizontal="true"
+        android:text="网格布局 Grid layout"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_absolute"
+        android:layout_below="@+id/btn_Grid"
+        android:layout_centerHorizontal="true"
+        android:text="绝对布局 absolute layout"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_constraint"
+        android:layout_below="@+id/btn_absolute"
+        android:layout_centerHorizontal="true"
+        android:text="约束性布局 constraint layout"
+        />
+</RelativeLayout>
