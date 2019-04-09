@@ -37,7 +37,8 @@ public class viewMain extends AppCompatActivity {
                     startActivity(intent);
                     break;
                 case R.id.btn_button:
-                    Toast.makeText(viewMain.this, "#暂不可用#", Toast.LENGTH_SHORT).show();
+                    intent.setClass(viewMain.this,basicButton.class);
+                    startActivity(intent);
                     break;
                 case R.id.btn_image:
                     Toast.makeText(viewMain.this, "#暂不可用#", Toast.LENGTH_SHORT).show();
