@@ -43,7 +43,8 @@ public class viewMain extends AppCompatActivity {
                     Toast.makeText(viewMain.this, "#暂不可用#", Toast.LENGTH_SHORT).show();
                     break;
                 case R.id.btn_toggle:
-                    Toast.makeText(viewMain.this, "#暂不可用#", Toast.LENGTH_SHORT).show();
+                    intent.setClass(viewMain.this,ToggleButton.class);
+                    startActivity(intent);
                     break;
                 case R.id.barx:
                     intent.setClass(viewMain.this,progressbarx.class);

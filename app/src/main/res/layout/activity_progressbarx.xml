@@ -10,7 +10,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="ProgressBar演示"
-        android:id="@+id/textView"
+        android:id="@+id/textViewx"
         android:textSize="25sp"
         />
     <ProgressBar
@@ -37,9 +37,9 @@
         android:visibility="gone"
         />
     <ProgressBar
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        style="?android:progressBarStyleHorizontal"
+        style="?android:attr/progressBarStyleHorizontal"
         android:id="@+id/progressBar4"
         android:max="100"
         android:visibility="gone"
@@ -58,5 +58,30 @@
     android:textSize="25sp"
 
     />
+        <SeekBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/seekbar"
+            android:max="255"
+            android:progress="55"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/seekbar_res"
+            android:text="RESRESRES"
+            />
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rating"
+        android:numStars="5"
+        android:rating="3"
+        android:stepSize="0.5"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rating_res"/>
 
 </LinearLayout>
