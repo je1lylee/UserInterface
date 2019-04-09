@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
     private Button btn_menu;
     private Button btn_guide;
     private Button btn_adapter;
+    private Button btn_brightness;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
         btn_menu = findViewById(R.id.btn_menu);
         btn_guide = findViewById(R.id.btn_guide);
         btn_adapter = findViewById(R.id.btn_adapter);
+        btn_brightness = findViewById(R.id.btn_brightness);
         btn_menu.setOnClickListener(new MyClickListener());
         btn_guide.setOnClickListener(new MyClickListener());
         btn_adapter.setOnClickListener(new MyClickListener());
@@ -41,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
         btn_menu.setOnClickListener(new MyClickListener());
         btn_guide.setOnClickListener(new MyClickListener());
         btn_adapter.setOnClickListener(new MyClickListener());
+        btn_brightness.setOnClickListener(new MyClickListener());
     }
 
     private class MyClickListener implements View.OnClickListener {
@@ -71,6 +74,9 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.btn_adapter:
                     Toast.makeText(MainActivity.this, "#暂不可用#", Toast.LENGTH_SHORT).show();
                     break;
+                case R.id.btn_brightness:
+                    intent.setClass(MainActivity.this,brightnessDemo.class);
+                    startActivity(intent);
             }
         }
     }

@@ -77,5 +77,14 @@
         android:text="Adapter与Adapter View"
         android:textAllCaps="false"
         />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_brightness"
+        android:layout_below="@+id/btn_adapter"
+        android:layout_centerHorizontal="true"
+        android:text="seekBar实现三种亮度调节模式"
+        android:textAllCaps="false"
+        />
 
 </RelativeLayout>
