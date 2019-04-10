@@ -4,16 +4,19 @@ import android.content.DialogInterface;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
 public class dialog extends AppCompatActivity {
-    private Button alertdlg,like,radiolg,multilog,viewdlg,progressdlg,
-    diylog;
+    private Button alertdlg,like,radiolg,multilog,viewdlg,progressdlg,diylog;
     private String[] provicesNames={"四川","贵州","广东","福建"};
     private int ChoiceIndex;
     private boolean[] defalutChoice;
+    private String[] courseItems = new String[] { "HTML5", "移动应用开发","分布式数据库","测试基础" };
+    private boolean[] defaultChoices = {false,true,false,false};
+    private static final String TAG = "dialog";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,7 +42,7 @@ public class dialog extends AppCompatActivity {
                         //返回-1
                     }
                 });
-                builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                builder.setNegativeButton("啥也不干", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         Toast.makeText(dialog.this, ""+i, Toast.LENGTH_SHORT).show();
@@ -112,29 +115,37 @@ public class dialog extends AppCompatActivity {
         });
 
     }
-    public void multiChoice(View view){
-        AlertDialog.Builder builder = new AlertDialog.Builder(dialog.this);
-        builder.setIcon(android.R.drawable.btn_star);
-        builder.setTitle("TEST");
-        builder.setNegativeButton("Yes", new DialogInterface.OnClickListener() {
+    public void multiChoice(View view) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setIcon(android.R.drawable.arrow_down_float);
+        builder.setTitle("请选择课程");
+        builder.setMultiChoiceItems(courseItems, defaultChoices, new DialogInterface.OnMultiChoiceClickListener() {
             @Override
-            public void onClick(DialogInterface dialogInterface, int i) {
-                for(int x = 0;x<defalutChoice.length;x++)
-                {
-
-                }
+            public void onClick(DialogInterface dialog, int which, boolean isChecked) {
+                // which代表 操作item的index isChecked代表item是选中还是取消
+                String state = (isChecked == true)?"选中":"取消";
+                Toast.makeText(dialog.this,state+"了"+courseItems[which],Toast.LENGTH_SHORT).show();
             }
         });
-        builder.setMultiChoiceItems(provicesNames,null, new DialogInterface.OnMultiChoiceClickListener() {
+        builder.setPositiveButton("确定", new DialogInterface.OnClickListener() {
             @Override
-            public void onClick(DialogInterface dialogInterface, int i, boolean b) {
-                String state = (b==true)?"选中":"取消";
-                Toast.makeText(dialog.this, state+provicesNames[i], Toast.LENGTH_SHORT).show();
-
+            public void onClick(DialogInterface dialog, int which) {
+                StringBuilder sbuilder = new StringBuilder();
+                //TODO 怎样拿到所有被选择的课程
+                // defaultChoices维护了所有多选框的状态
+                for (int i=0;i<defaultChoices.length;i++){
+                    Log.d(TAG,"defaultChoices["+i+"]="+defaultChoices[i]);
+                    if (defaultChoices[i]){
+                        sbuilder.append(" "+courseItems[i]);
+                    }
+                }
+                Log.d(TAG,"最终选择的课程有："+sbuilder.toString());
+                Toast.makeText(dialog.this, "最终选择的课程有："+sbuilder.toString(), Toast.LENGTH_SHORT).show();
             }
         });
         builder.create().show();
     }
+
 
     public void fruitClick(View view) {
     }
