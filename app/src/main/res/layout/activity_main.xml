@@ -41,7 +41,7 @@
         android:id="@+id/btn_dialog"
         android:layout_below="@+id/btn_view"
         android:layout_centerHorizontal="true"
-        android:text="对话框用法"
+        android:text="对话框用法(dialog"
         />
     <Button
         android:layout_width="match_parent"
