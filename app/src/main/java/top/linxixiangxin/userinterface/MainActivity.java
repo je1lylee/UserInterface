@@ -60,7 +60,8 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(intent);
                     break;
                 case R.id.btn_dialog:
-                    Toast.makeText(MainActivity.this, "#暂不可用#", Toast.LENGTH_SHORT).show();
+                    intent.setClass(MainActivity.this,dialog.class);
+                    startActivity(intent);
                     break;
                 case R.id.btn_toast:
                     Toast.makeText(MainActivity.this, "#暂不可用#", Toast.LENGTH_SHORT).show();

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/alertdlg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="提示对话框" />
+        <Button
+            android:id="@+id/like"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="调查对话框" />
+        <Button
+            android:id="@+id/radiodlg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="单选对话框" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="multiChoice"
+            android:text="多选对话框" />
+
+        <Button
+            android:id="@+id/viewdlg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="customView"
+            android:text="自定义view对话框" />
+        <Button
+            android:id="@+id/progressdlg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="进度条对话框" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="自定义对话框测试"
+            />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+            <ImageView
+                android:id="@+id/apple"
+                android:layout_width="80dip"
+                android:layout_height="80dip"
+                android:src="@drawable/apple"
+                android:scaleType="fitCenter"
+                android:clickable="true"
+                android:onClick="fruitClick"/>
+            <ImageView
+                android:id="@+id/orange"
+                android:layout_width="80dip"
+                android:layout_height="80dip"
+                android:layout_marginLeft="30dip"
+                android:src="@drawable/orange"
+                android:scaleType="fitCenter"
+                android:clickable="true"
+                android:onClick="fruitClick"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
