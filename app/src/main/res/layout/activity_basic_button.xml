@@ -1,9 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".basicButton">
+    tools:context=".basicButton"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:orientation="horizontal"
+        android:id="@+id/topxxx">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="layout中绑定事件"
+            android:onClick="Buttoner"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/tete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/topxxx">
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Left"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:padding="5dp"
+            android:drawableLeft="@mipmap/ic_launcher"
+            android:layout_weight="1"
 
-</android.support.constraint.ConstraintLayout>
+            />
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Right"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:padding="5dp"
+            android:drawableRight="@mipmap/ic_launcher"
+            android:layout_weight="1"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/tete"
+        android:id="@+id/linear2">
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Top"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:padding="5dp"
+            android:drawableTop="@mipmap/ic_launcher"
+            android:layout_weight="1"
+            />
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Bottom"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:padding="5dp"
+            android:drawableBottom="@mipmap/ic_launcher"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/linear3"
+        android:layout_below="@+id/linear2">
+        
+
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>
