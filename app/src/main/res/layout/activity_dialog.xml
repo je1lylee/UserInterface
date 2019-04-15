@@ -41,13 +41,23 @@
             android:id="@+id/progressdlg"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="进度条对话框" />
+            android:text="进度条对话框"
+            android:onClick="clickProgress"/>
 
         <Button
             android:id="@+id/diylog"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="自定义对话框测试"
+            />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/datedialog"
+            android:text="日期对话框"
+            android:onClick="showDatePicker"
+
+
             />
         <LinearLayout
             android:layout_width="wrap_content"

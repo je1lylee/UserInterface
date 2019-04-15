@@ -1,5 +1,7 @@
 package top.linxixiangxin.userinterface;
 
+import android.app.DatePickerDialog;
+import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -7,11 +9,13 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.SeekBar;
 import android.widget.Toast;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
+
+import java.util.Calendar;
 
 public class dialog extends AppCompatActivity {
     private Button alertdlg,like,radiolg,multilog,viewdlg,progressdlg,diylog;
@@ -21,6 +25,7 @@ public class dialog extends AppCompatActivity {
     private String[] courseItems = new String[] { "HTML5", "移动应用开发","分布式数据库","测试基础" };
     private boolean[] defaultChoices = {false,true,false,false};
     private static final String TAG = "dialog";
+    private int year = Calendar.YEAR,month = Calendar.MONTH,dayOfMonth = Calendar.DAY_OF_MONTH;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -190,5 +195,40 @@ public class dialog extends AppCompatActivity {
                     }
                 })
                 .create().show();
+    }
+
+    public void clickProgress(View view) {
+        ProgressDialog pdialog = new ProgressDialog(dialog.this);
+        pdialog.setTitle("File Download");
+        pdialog.setIcon(R.drawable.ic_launcher_background);
+        pdialog.setMax(100);
+        pdialog.setMessage("Download complete");
+        pdialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
+        pdialog.setCancelable(true);
+        pdialog.show();
+        //TODO 多线程不会啊！！！
+
+
+    }
+    public void run(){
+        //todo 多线程
+
+    }
+
+    public void showDatePicker(View view) {
+
+        DatePickerDialog.OnDateSetListener listener1 = new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker view, int y, int m, int dOfM) {
+                year = y;
+                month = m+1;
+                dayOfMonth = dOfM;
+                Toast.makeText(dialog.this, "你设置的时间是"+year+"年"+month+"月"+dayOfMonth+"日", Toast.LENGTH_SHORT).show();
+            }
+        };
+        DatePickerDialog dpDialog = new DatePickerDialog(dialog.this,listener1,year,month,dayOfMonth);
+        dpDialog.setIcon(R.drawable.ic_launcher_foreground);
+        dpDialog.setMessage("请选择日期");
+        dpDialog.show();
     }
 }
