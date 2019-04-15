@@ -17,8 +17,9 @@ import android.widget.TextView;
 
 import java.util.Calendar;
 
-public class dialog extends AppCompatActivity {
+public class dialog extends AppCompatActivity implements Runnable{
     private Button alertdlg,like,radiolg,multilog,viewdlg,progressdlg,diylog;
+    private ProgressDialog pdialog;
     private String[] provicesNames={"四川","贵州","广东","福建"};
     private int ChoiceIndex;
     private boolean[] defalutChoice;
@@ -26,7 +27,6 @@ public class dialog extends AppCompatActivity {
     private boolean[] defaultChoices = {false,true,false,false};
     private static final String TAG = "dialog";
     private int year = Calendar.YEAR,month = Calendar.MONTH,dayOfMonth = Calendar.DAY_OF_MONTH;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -198,7 +198,7 @@ public class dialog extends AppCompatActivity {
     }
 
     public void clickProgress(View view) {
-        ProgressDialog pdialog = new ProgressDialog(dialog.this);
+        pdialog = new ProgressDialog(dialog.this);
         pdialog.setTitle("File Download");
         pdialog.setIcon(R.drawable.ic_launcher_background);
         pdialog.setMax(100);
@@ -206,13 +206,27 @@ public class dialog extends AppCompatActivity {
         pdialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
         pdialog.setCancelable(true);
         pdialog.show();
-        //TODO 多线程不会啊！！！
+        new Thread(dialog.this).start();
+
 
 
     }
+    @Override
     public void run(){
-        //todo 多线程
-
+        int progress = 0;
+        while(progress<100)
+            Log.d(TAG,"INTO");
+        {
+            try{
+                Thread.sleep(100);
+                progress++;
+                pdialog.setProgress(progress);
+                pdialog.incrementProgressBy(5);
+            }
+            catch (InterruptedException e){
+                e.printStackTrace();
+            }
+        }
     }
 
     public void showDatePicker(View view) {
