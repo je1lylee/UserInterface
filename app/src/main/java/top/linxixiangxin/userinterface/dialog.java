@@ -7,7 +7,11 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.SeekBar;
 import android.widget.Toast;
+import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 public class dialog extends AppCompatActivity {
     private Button alertdlg,like,radiolg,multilog,viewdlg,progressdlg,diylog;
@@ -114,6 +118,8 @@ public class dialog extends AppCompatActivity {
             }
         });
 
+
+
     }
     public void multiChoice(View view) {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -144,9 +150,45 @@ public class dialog extends AppCompatActivity {
             }
         });
         builder.create().show();
+
     }
 
 
     public void fruitClick(View view) {
+    }
+
+    public void customView(View view) {
+        //自定义对话框
+        View seekView = getLayoutInflater().inflate(R.layout.seek_dialog,null);
+        SeekBar sbar = seekView.findViewById(R.id.seekbar_1);
+        sbar.setMax(100);
+        final TextView tv_seekBar = seekView.findViewById(R.id.txv_seekbar);
+        tv_seekBar.setText("当前的进度为:"+sbar.getProgress());
+        sbar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                tv_seekBar.setText("当前的进度为:"+seekBar.getProgress());
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+            }
+        });
+        new AlertDialog.Builder(dialog.this)
+                .setTitle("拖动对话框")
+                .setView(seekView)
+                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                    }
+                })
+                .create().show();
     }
 }
