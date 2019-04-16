@@ -254,15 +254,14 @@ public class dialog extends AppCompatActivity implements Runnable{
         String fruitName = null;
         switch (view.getId()){
             case R.id.apple:
-                fruitName = "Apple";
+                fruitName = "红富士苹果";
                 break;
             case R.id.orange:
-                fruitName="Orange";
+                fruitName="青城山橘子";
                 break;
         }
         FruitDialog=new FruitDialog(this,R.style.MyDialog,R.layout.custom_dialog);
         //传入水果的名称
-        ((FruitDialog) FruitDialog).setFruitname(fruitName);
         ((FruitDialog) FruitDialog).setFruitname(fruitName);
         FruitDialog.show();
 

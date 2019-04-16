@@ -37,6 +37,7 @@ public class FruitDialog extends Dialog {
         btn_cancel = findViewById(R.id.cancle);
         item = findViewById(R.id.dtv);
         weight = findViewById(R.id.econtent);
+        item.setText(fruitname);
         btn_ok.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
