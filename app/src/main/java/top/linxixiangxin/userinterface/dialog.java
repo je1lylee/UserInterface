@@ -1,6 +1,7 @@
 package top.linxixiangxin.userinterface;
 
 import android.app.DatePickerDialog;
+import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.support.v7.app.AlertDialog;
@@ -22,11 +23,13 @@ public class dialog extends AppCompatActivity implements Runnable{
     private ProgressDialog pdialog;
     private String[] provicesNames={"四川","贵州","广东","福建"};
     private int ChoiceIndex;
+    private Dialog FruitDialog;
     private boolean[] defalutChoice;
     private String[] courseItems = new String[] { "HTML5", "移动应用开发","分布式数据库","测试基础" };
     private boolean[] defaultChoices = {false,true,false,false};
     private static final String TAG = "dialog";
     private int year = Calendar.YEAR,month = Calendar.MONTH,dayOfMonth = Calendar.DAY_OF_MONTH;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -206,7 +209,7 @@ public class dialog extends AppCompatActivity implements Runnable{
         pdialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
         pdialog.setCancelable(true);
         pdialog.show();
-        new Thread(dialog.this).start();
+//        new Thread(dialog.this).start();
 
 
 
@@ -244,5 +247,25 @@ public class dialog extends AppCompatActivity implements Runnable{
         dpDialog.setIcon(R.drawable.ic_launcher_foreground);
         dpDialog.setMessage("请选择日期");
         dpDialog.show();
+    }
+
+    public void testDialog(View view) {//onCustomDialogShow
+        //1 public 2 void 3 same with XML 4.Must have View;
+        String fruitName = null;
+        switch (view.getId()){
+            case R.id.apple:
+                fruitName = "Apple";
+                break;
+            case R.id.orange:
+                fruitName="Orange";
+                break;
+        }
+        FruitDialog=new FruitDialog(this,R.style.MyDialog,R.layout.custom_dialog);
+        //传入水果的名称
+        ((FruitDialog) FruitDialog).setFruitname(fruitName);
+        ((FruitDialog) FruitDialog).setFruitname(fruitName);
+        FruitDialog.show();
+
+
     }
 }

@@ -51,6 +51,13 @@
             android:text="自定义对话框测试"
             />
         <Button
+            android:id="@+id/mydialog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="上课测试自定义对话框"
+            android:onClick="testDialog"
+            />
+        <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/datedialog"
@@ -70,7 +77,7 @@
                 android:src="@drawable/apple"
                 android:scaleType="fitCenter"
                 android:clickable="true"
-                android:onClick="fruitClick"/>
+                android:onClick="testDialog"/>
             <ImageView
                 android:id="@+id/orange"
                 android:layout_width="80dip"
@@ -79,7 +86,7 @@
                 android:src="@drawable/orange"
                 android:scaleType="fitCenter"
                 android:clickable="true"
-                android:onClick="fruitClick"/>
+                android:onClick="testDialog"/>
         </LinearLayout>
 
     </LinearLayout>

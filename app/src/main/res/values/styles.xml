@@ -10,10 +10,10 @@
     <!--对话框的风格  -->
     <style name="MyDialog" parent="@android:style/Theme.Dialog">
         <item name="android:windowFrame">@null</item>
-        <item name="android:windowNoTitle">true</item>
+        <!--Frame没有边框，没有标题，设置背景，是否悬浮于窗口之上-->
+        <item name="android:windowNoTitle">true</item>S
         <item name="android:windowBackground">@drawable/dialogbg</item>
         <item name="android:windowIsFloating">true</item>
-        <item name="android:windowContentOverlay">@null</item>
     </style>
 
 </resources>
