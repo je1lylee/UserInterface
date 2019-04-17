@@ -16,6 +16,7 @@ public class FruitDialog extends Dialog {
     private EditText item,weight;
     private Context context;
     private String fruitname;
+    private double fruitWeight;
 
     /**
      * 构造一个水果对话框
@@ -29,8 +30,9 @@ public class FruitDialog extends Dialog {
         Log.d(TAG, "FruitDialog: 构造方法已调用");
         this.context = context;
     }
+
     @Override
-    protected void onCreate(Bundle savedInstanceState){
+    protected void onCreate(Bundle savedInstanceState){//设置布局set content view;
         super.onCreate(savedInstanceState);
         setContentView(dialogLayoutId);
         btn_ok = findViewById(R.id.okbtn);
@@ -39,6 +41,8 @@ public class FruitDialog extends Dialog {
         weight = findViewById(R.id.econtent);
         item.setText(fruitname);
         btn_ok.setOnClickListener(new View.OnClickListener() {
+
+
             @Override
             public void onClick(View view) {
                 //获取水果名称和重量，并展示;
@@ -46,6 +50,7 @@ public class FruitDialog extends Dialog {
                 String Weight = weight.getText().toString().trim();
                 if(name != null && !name.equals("") && Weight != null && !Weight.equals("")){
                     Toast.makeText(context,"购买了"+name+",重量是："+Weight+"Kg", Toast.LENGTH_SHORT).show();
+                    setFruitWeight(Double.valueOf(Weight));
                 }
 
                 dismiss();
@@ -61,5 +66,17 @@ public class FruitDialog extends Dialog {
     }
     public void setFruitname(String furitName){
         this.fruitname = furitName;
+    }
+    public String getFruitname()
+    {
+        return this.item.getText().toString();
+    }
+
+    public double getFruitWeight() {
+        return fruitWeight;
+    }
+
+    public void setFruitWeight(double fruitWeight) {
+        this.fruitWeight = fruitWeight;
     }
 }

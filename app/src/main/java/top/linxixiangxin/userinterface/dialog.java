@@ -17,6 +17,8 @@ import android.widget.TextView;
 
 
 import java.util.Calendar;
+import java.util.HashMap;
+import java.util.Set;
 
 public class dialog extends AppCompatActivity implements Runnable{
     private Button alertdlg,like,radiolg,multilog,viewdlg,progressdlg,diylog;
@@ -29,6 +31,9 @@ public class dialog extends AppCompatActivity implements Runnable{
     private boolean[] defaultChoices = {false,true,false,false};
     private static final String TAG = "dialog";
     private int year = Calendar.YEAR,month = Calendar.MONTH,dayOfMonth = Calendar.DAY_OF_MONTH;
+    private double totalPrice;//所有的总价
+    private HashMap<String, Double> hashMap = new HashMap<String, Double>();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -264,7 +269,30 @@ public class dialog extends AppCompatActivity implements Runnable{
         //传入水果的名称
         ((FruitDialog) FruitDialog).setFruitname(fruitName);
         FruitDialog.show();
+        FruitDialog.setOnDismissListener(new DialogInterface.OnDismissListener() {
+            @Override
+            public void onDismiss(DialogInterface dialogInterface) {
+                double frt_weight = ((FruitDialog) FruitDialog).getFruitWeight();
+                Log.d(TAG, "购买了"+((FruitDialog) FruitDialog).getFruitname()+",重量为："+((FruitDialog) FruitDialog).getFruitWeight()+"Kg");
+                switch ()
+                hashMap.put(((FruitDialog) FruitDialog).getFruitname(),((FruitDialog) FruitDialog).getFruitWeight()*constant.PRICE_OF_APPLE);
+            }
+        });
 
+
+    }
+
+    public void printBill(View view) {
+        Log.d(TAG, "printBill: PRESS");
+        Set<String> keys = hashMap.keySet();
+        Log.d(TAG, "====================");
+        Log.d(TAG, "==欢迎光临某某水果店==");
+        Log.d(TAG, "========账单=========");
+        Log.d(TAG, "品名            价格");
+        for(String key:keys){
+            Log.d(TAG, key+"        "+hashMap.get(key));
+        }
+        Log.d(TAG, "=======谢谢惠顾=======");
 
     }
 }

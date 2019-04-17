@@ -10,7 +10,9 @@
         android:layout_height="wrap_content"
         android:textSize="20sp"
         android:hint="请输入品名"
-        android:layout_centerInParent="true"/>
+        android:layout_centerInParent="true"
+        android:enabled="true"
+        />
     <EditText
         android:id="@+id/econtent"
         android:layout_width="200dp"
