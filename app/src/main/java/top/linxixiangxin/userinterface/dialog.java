@@ -31,7 +31,7 @@ public class dialog extends AppCompatActivity implements Runnable{
     private boolean[] defaultChoices = {false,true,false,false};
     private static final String TAG = "dialog";
     private int year = Calendar.YEAR,month = Calendar.MONTH,dayOfMonth = Calendar.DAY_OF_MONTH;
-    private double totalPrice;//所有的总价
+    private double totalPrice = 0;//所有的总价
     private HashMap<String, Double> hashMap = new HashMap<String, Double>();
 
 
@@ -257,7 +257,7 @@ public class dialog extends AppCompatActivity implements Runnable{
     public void testDialog(View view) {//onCustomDialogShow
         //1 public 2 void 3 same with XML 4.Must have View;
         String fruitName = null;
-        switch (view.getId()){
+        switch (view.getId()){//那张图片被点击了
             case R.id.apple:
                 fruitName = "红富士苹果";
                 break;
@@ -274,8 +274,16 @@ public class dialog extends AppCompatActivity implements Runnable{
             public void onDismiss(DialogInterface dialogInterface) {
                 double frt_weight = ((FruitDialog) FruitDialog).getFruitWeight();
                 Log.d(TAG, "购买了"+((FruitDialog) FruitDialog).getFruitname()+",重量为："+((FruitDialog) FruitDialog).getFruitWeight()+"Kg");
-                switch ()
-                hashMap.put(((FruitDialog) FruitDialog).getFruitname(),((FruitDialog) FruitDialog).getFruitWeight()*constant.PRICE_OF_APPLE);
+                switch (((FruitDialog) FruitDialog).getFruitname()){
+                    case "红富士苹果":
+                        hashMap.put(((FruitDialog) FruitDialog).getFruitname(),((FruitDialog) FruitDialog).getFruitWeight()*constant.PRICE_OF_APPLE);
+                        totalPrice += ((FruitDialog) FruitDialog).getFruitWeight()*constant.PRICE_OF_APPLE;
+                        break;
+                    case "青城山橘子":
+                        hashMap.put(((FruitDialog) FruitDialog).getFruitname(),((FruitDialog) FruitDialog).getFruitWeight()*constant.PRICE_OF_ORANGE);
+                        totalPrice += ((FruitDialog) FruitDialog).getFruitWeight()*constant.PRICE_OF_ORANGE;
+                        break;
+                }
             }
         });
 
@@ -290,8 +298,10 @@ public class dialog extends AppCompatActivity implements Runnable{
         Log.d(TAG, "========账单=========");
         Log.d(TAG, "品名            价格");
         for(String key:keys){
-            Log.d(TAG, key+"        "+hashMap.get(key));
+            Log.d(TAG, key+"      "+hashMap.get(key));
         }
+        Log.d(TAG, "=====================");
+        Log.d(TAG, "总价格         "+totalPrice+"元");
         Log.d(TAG, "=======谢谢惠顾=======");
 
     }
