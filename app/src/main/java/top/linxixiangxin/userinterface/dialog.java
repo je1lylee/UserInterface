@@ -293,6 +293,7 @@ public class dialog extends AppCompatActivity implements Runnable{
     }
 
     public void printBill(View view) {
+        int itemNum = 0;
         Log.d(TAG, "printBill: PRESS");
         Set<String> keys = hashMap.keySet();
         Log.d(TAG, "====================");
@@ -301,9 +302,11 @@ public class dialog extends AppCompatActivity implements Runnable{
         Log.d(TAG, "品名            价格");
         for(String key:keys){
             Log.d(TAG, key+"  "+hashMap.get(key));
+            itemNum++;
         }
         Log.d(TAG, "=====================");
         Log.d(TAG, "总价格         "+totalPrice+"元");
+        Log.d(TAG, "总件数         "+itemNum+"件");
         Log.d(TAG, "=======谢谢惠顾=======");
 
     }
