@@ -1,3 +1,21 @@
 <resources>
     <string name="app_name">UI开发</string>
+    <string-array name="example_info_array">
+        <item name="auto_complete_textview">自动提示输入框</item>
+        <item name="spinner_test">Spinner下拉列表框</item>
+        <item name="array_adapter_test">ArrayAdapter适配器</item>
+        <item name="simple_adapter_test">SimpleAdapter适配器</item>
+        <item name="custom_adapter_test">自定义Adapter适配器</item>
+        <item name="QQ_Actions_example">QQ空间动态</item>
+    </string-array>
+    <!-- 在XML中定义的Spinner的内容 -->
+    <string-array name="courses">
+        <item> Android应用开发</item>
+        <item> 软件工程</item>
+        <item> 软件测试</item>
+        <item> Java程序设计</item>      
+        <item> 数据结构</item>
+        <item> 计算机组成原理</item>
+        <item> 大学计算机基础</item>
+    </string-array>
 </resources>
