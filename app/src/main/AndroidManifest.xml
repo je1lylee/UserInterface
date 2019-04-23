@@ -14,7 +14,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".dialog"></activity>
+        <activity android:name=".adapter_autocompletetv"></activity>
+        <activity android:name=".adapter" />
+        <activity android:name=".dialog" />
         <activity android:name=".brightnessDemo" />
         <activity android:name=".basicButton" />
         <activity android:name=".ToggleButton" />
