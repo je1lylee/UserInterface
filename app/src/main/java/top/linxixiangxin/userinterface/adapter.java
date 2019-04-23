@@ -1,5 +1,6 @@
 package top.linxixiangxin.userinterface;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -28,6 +29,17 @@ public class adapter extends AppCompatActivity {
                 //哪一个adapter,点的哪一个控件，
 
                 Toast.makeText(adapter.this, "您将要学习的是："+((TextView)view).getText().toString(), Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent();
+                switch (i){
+                    case 0:
+                        intent.setClass(adapter.this,adapter_autocompletetv.class);
+                        startActivity(intent);
+                        break;
+                    case 1:
+                        intent.setClass(adapter.this,adapter_spinner.class);
+                        startActivity(intent);
+                }
+
 
             }
         });
