@@ -38,6 +38,13 @@ public class adapter extends AppCompatActivity {
                     case 1:
                         intent.setClass(adapter.this,adapter_spinner.class);
                         startActivity(intent);
+                        break;
+                    case 3:
+                        intent.setClass(adapter.this,adapter_simple_adapter.class);
+                        startActivity(intent);
+                        break;
+                        default:
+                            Toast.makeText(adapter.this, "#暂不可用#", Toast.LENGTH_SHORT).show();
                 }
 
 

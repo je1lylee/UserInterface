@@ -14,7 +14,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".adapter_spinner"></activity>
+        <activity android:name=".adapter_simple_adapter"></activity>
+        <activity android:name=".adapter_simple_item" />
+        <activity android:name=".adapter_spinner" />
         <activity android:name=".adapter_autocompletetv" />
         <activity android:name=".adapter" />
         <activity android:name=".dialog" />
