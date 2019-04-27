@@ -17,7 +17,8 @@
         android:layout_centerVertical="true"
         android:layout_marginLeft="16dp"
         android:layout_toRightOf="@+id/img_simple"
-        android:text="文字信息" />
+        android:text="文字信息"
+        android:textColor="#000000"/>
 
     <CheckBox
         android:id="@+id/cbx"
@@ -29,6 +30,7 @@
         android:layout_marginRight="10dp"
         android:focusable="false"
         android:focusableInTouchMode="false"
-        android:text="删除" />
+        android:text="删除"
+        android:textColor="#000000"/>
 
 </RelativeLayout>
