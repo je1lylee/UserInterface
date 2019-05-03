@@ -50,7 +50,7 @@ public class adapter_simple_adapter extends AppCompatActivity implements Adapter
                 new String[]{"image","info","cbx"},//布局中的控件名
                 new int[]{R.id.img_simple,R.id.tv_content,R.id.cbx}){//寻找控件ID
             @Override
-            public View getView(final int position, View convertView, ViewGroup parent) {
+            public View getView(final int position, View convertView, ViewGroup parent) {//VIEWGROUP  某行布局
                 View view = LayoutInflater.from(getApplicationContext()).inflate(R.layout.simple_item,parent,false);//获得创建在页面中的自定义VIEW
                 TextView textView = view.findViewById(R.id.tv_content);//寻找控件 并设置控件的内容和初始状态。
                 CheckBox checkBox = view.findViewById(R.id.cbx);
