@@ -58,9 +58,9 @@ public class wechat_moment extends BaseAdapter {
             holder = (ViewHolder) view.getTag();
         }
         holder.image.setImageResource((Integer) listItems.get(i).get("image"));
-        holder.user_name.setText((Integer) listItems.get(i).get("username"));
-        holder.user_content.setText((Integer) listItems.get(i).get("usercontent"));
-        holder.sendTime.setText((Integer) listItems.get(i).get("sendtime"));
+        holder.user_name.setText((String) listItems.get(i).get("username"));
+        holder.user_content.setText((String) listItems.get(i).get("usercontent"));
+        holder.sendTime.setText((String) listItems.get(i).get("sendtime"));
         return view;
     }
 }

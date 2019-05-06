@@ -7,6 +7,7 @@
         <item name="simple_adapter_test">SimpleAdapter适配器</item>
         <item name="custom_adapter_test">自定义Adapter适配器</item>
         <item name="QQ_Actions_example">QQ空间动态</item>
+        <item name="wechat_moment">微信票圈</item>
     </string-array>
     <!-- 在XML中定义的Spinner的内容 -->
     <string-array name="courses">

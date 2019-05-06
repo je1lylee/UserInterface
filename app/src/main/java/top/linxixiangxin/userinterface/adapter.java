@@ -46,6 +46,9 @@ public class adapter extends AppCompatActivity {
                     case 4:
                         intent.setClass(adapter.this,adapter_base_adapter.class);
                         startActivity(intent);
+                    case 6:
+                        intent.setClass(adapter.this,wechat_final_moment.class);
+                        startActivity(intent);
                         default:
                             Toast.makeText(adapter.this, "#暂不可用#", Toast.LENGTH_SHORT).show();
                 }
