@@ -8,7 +8,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:gravity="center_vertical|center_horizontal" >
+        android:gravity="center_vertical|center_horizontal">
 
         <ImageView
             android:id="@+id/imageView1"
@@ -29,7 +29,6 @@
         android:id="@+id/friendlist"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:dividerHeight="3dp" >
-    </ListView>
+        android:dividerHeight="3dp"></ListView>
 
 </LinearLayout>

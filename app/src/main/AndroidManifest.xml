@@ -14,7 +14,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".adapter_base_adapter"></activity>
+        <activity android:name=".wechat_final_moment"></activity>
+        <activity android:name=".adapter_base_adapter" />
         <activity android:name=".adapter_simple_adapter" />
         <activity android:name=".adapter_simple_item" />
         <activity android:name=".adapter_spinner" />
