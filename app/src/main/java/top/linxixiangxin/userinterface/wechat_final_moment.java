@@ -55,7 +55,7 @@ public class wechat_final_moment extends AppCompatActivity {
         setContentView(R.layout.activity_wechat_final_moment);
         listView = findViewById(R.id.momentList);
         listItems = getContentItems();
-        listaAdapter = new wechat_moment(this,listItems);
+        listaAdapter = new wechat_moment(this,listItems); //填充数据
         listView.setAdapter(listaAdapter);
     }
 

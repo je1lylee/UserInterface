@@ -2,17 +2,20 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="horizontal">
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:id="@+id/friend_head_img"
-        android:src="@drawable/tangseng"/>
+
     <!--只是暂时将唐僧君放在这里-->
-    <LinearLayout
+    <ImageView
+        android:id="@+id/friend_head_img"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:src="@drawable/tangseng"
+        android:layout_marginTop="10dp"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
         android:layout_marginLeft="5dp"
         android:orientation="vertical">
         <TextView
@@ -27,6 +30,13 @@
             android:layout_height="wrap_content"
             android:id="@+id/moment_content"
             android:text="这里应该是正文来的"/>
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:rowCount="2"
+            android:columnCount="3">
+
+        </GridLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
