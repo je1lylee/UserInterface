@@ -1,12 +1,10 @@
 package top.linxixiangxin.userinterface;
 
 import android.content.Context;
-import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.GridLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -79,7 +77,12 @@ public class wechat_moment extends BaseAdapter {
                     holder.user_name = view.findViewById(R.id.moment_Name);
                     holder.user_content = view.findViewById(R.id.moment_content);
                     holder.sendTime = view.findViewById(R.id.moment_sendtime);
-                    holder.img_display = view.findViewById(R.id.grid_pic);
+                    holder.gimg1 = view.findViewById(R.id.grid_1);
+                    holder.gimg2 = view.findViewById(R.id.grid_2);
+                    holder.gimg3 = view.findViewById(R.id.grid_3);
+                    holder.gimg4 = view.findViewById(R.id.grid_4);
+                    holder.gimg5 = view.findViewById(R.id.grid_5);
+                    holder.gimg6 = view.findViewById(R.id.grid_6);
                     view.setTag(holder);
                     break;
             }
@@ -104,7 +107,12 @@ public class wechat_moment extends BaseAdapter {
                     holder.user_name.setText((String) listItems.get(i).get("username"));
                     holder.user_content.setText((String) listItems.get(i).get("usercontent"));
                     holder.sendTime.setText((String) listItems.get(i).get("sendtime"));
-                    holder.img_display.;
+                    holder.gimg1.setImageResource((Integer) listItems.get(i).get("img1"));
+                    holder.gimg2.setImageResource((Integer) listItems.get(i).get("img2"));
+                    holder.gimg3.setImageResource((Integer) listItems.get(i).get("img3"));
+                    holder.gimg4.setImageResource((Integer) listItems.get(i).get("img4"));
+                    holder.gimg5.setImageResource((Integer) listItems.get(i).get("img5"));
+                    holder.gimg6.setImageResource((Integer) listItems.get(i).get("img6"));
                     break;
         }
 
