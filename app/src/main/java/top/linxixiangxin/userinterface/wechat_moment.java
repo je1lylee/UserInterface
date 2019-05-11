@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.GridLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -22,7 +23,7 @@ public class wechat_moment extends BaseAdapter {
         public TextView user_name;
         public TextView user_content;
         public TextView sendTime;
-        public ImageView header_img;
+        public ImageView header_img,gimg1,gimg2,gimg3,gimg4,gimg5,gimg6;
     }
 
     public wechat_moment(Context context, List<Map<String, Object>> listItems) {
@@ -78,6 +79,7 @@ public class wechat_moment extends BaseAdapter {
                     holder.user_name = view.findViewById(R.id.moment_Name);
                     holder.user_content = view.findViewById(R.id.moment_content);
                     holder.sendTime = view.findViewById(R.id.moment_sendtime);
+                    holder.img_display = view.findViewById(R.id.grid_pic);
                     view.setTag(holder);
                     break;
             }
@@ -102,6 +104,7 @@ public class wechat_moment extends BaseAdapter {
                     holder.user_name.setText((String) listItems.get(i).get("username"));
                     holder.user_content.setText((String) listItems.get(i).get("usercontent"));
                     holder.sendTime.setText((String) listItems.get(i).get("sendtime"));
+                    holder.img_display.;
                     break;
         }
 
