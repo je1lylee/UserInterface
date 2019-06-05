@@ -15,5 +15,14 @@
         <item name="android:windowBackground">@drawable/dialogbg</item>
         <item name="android:windowIsFloating">true</item>
     </style>
+    <!--定义朋友圈菜单dialog-->
+    <style name="wechat_moment" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <!--Frame没有边框，没有标题，设置背景，是否悬浮于窗口之上-->
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">#4D5153</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:backgroundDimAmount">0.5</item>
+    </style>
 
 </resources>

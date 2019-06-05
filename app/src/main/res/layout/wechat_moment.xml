@@ -13,7 +13,7 @@
         android:src="@drawable/tangseng" />
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="5dp"
         android:minHeight="50dp"
@@ -55,11 +55,9 @@
 
             <ImageView android:id="@+id/grid_6" />
         </GridLayout>
-
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="wrap_content">
 
             <TextView
                 android:id="@+id/moment_sendtime"
@@ -70,9 +68,20 @@
                 android:textColor="@color/moment_send_time"
                 android:textSize="12dp" />
 
-        </LinearLayout>
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="28dp"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/menu_button"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="20dp"
+                android:id="@+id/popDialog"
+                />
+        </RelativeLayout>
+
 
 
     </LinearLayout>
+
 
 </LinearLayout>

@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.List;
 import java.util.Map;
@@ -22,6 +23,7 @@ public class wechat_moment extends BaseAdapter {
         public TextView user_content;
         public TextView sendTime;
         public ImageView header_img,gimg1,gimg2,gimg3,gimg4,gimg5,gimg6;
+        public ImageView popDialog;
     }
 
     public wechat_moment(Context context, List<Map<String, Object>> listItems) {
@@ -83,6 +85,14 @@ public class wechat_moment extends BaseAdapter {
                     holder.gimg4 = view.findViewById(R.id.grid_4);
                     holder.gimg5 = view.findViewById(R.id.grid_5);
                     holder.gimg6 = view.findViewById(R.id.grid_6);
+                    holder.popDialog = view.findViewById(R.id.popDialog);
+                    holder.popDialog.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {//设置menu按下的监听
+                            Toast.makeText(context, "被按下", Toast.LENGTH_SHORT).show();
+                        }
+                    });
+
                     view.setTag(holder);
                     break;
             }

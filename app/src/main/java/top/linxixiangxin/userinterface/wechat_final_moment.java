@@ -14,6 +14,7 @@ public class wechat_final_moment extends AppCompatActivity {
     private ListView listView;
     private wechat_moment listaAdapter;
     private List<Map<String, Object>> listItems;
+    //构造数据源
     private Integer[] imgIDs = {R.drawable.tangseng
             , R.drawable.tangseng
             , R.drawable.tangseng
@@ -110,6 +111,7 @@ public class wechat_final_moment extends AppCompatActivity {
         listItems = getContentItems();
         listaAdapter = new wechat_moment(this, listItems); //填充数据
         listView.setAdapter(listaAdapter);
+        this.setTitle("朋友圈");
     }
 
 

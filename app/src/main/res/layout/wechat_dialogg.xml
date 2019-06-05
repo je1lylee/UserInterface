@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:src="@drawable/heart"
+        android:id="@+id/heart"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="点赞"
+        android:layout_toRightOf="@id/heart"
+        android:id="@+id/text_heart"/>
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="25dp"
+        android:background="#000000"
+        android:id="@+id/myLine"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/text_heart"/>
+    <ImageView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:src="@drawable/message"
+        android:id="@+id/message"
+        android:layout_toRightOf="@+id/myLine"/>
+
+
+</RelativeLayout>
